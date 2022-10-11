@@ -17,10 +17,12 @@ button {
   background-color: #f4f1ec;
 }
 
-section {
+section.new-tweet {
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
+  padding: 10px;
 }
 
 form {

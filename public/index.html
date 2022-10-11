@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -27,18 +28,19 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-directory.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-dynamics.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="logo">tweeter</span>
-      <div>
-      <p id="write-tweet"><strong>Write</strong> a new tweet</p>
-      <i class="fa-solid fa-angles-down"></i>
+      <div id="write-tweet">
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <header class="page-header">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -50,7 +52,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <label for="tweet-text"></label>
           <textarea Content-Type="application/x-www-form-urlencoded" name="text" id="tweet-text"placeholder="What are you humming about?"></textarea>
@@ -59,6 +60,32 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section>
+        <article class="tweets">
+          <header>
+            <div class="username">
+              <img src="/images/profile-hex.png"> 
+              <p>Username</p>
+            </div>
+            <p>@tweethandle</p>
+          </header>
+          <section>
+            <p>
+            <strong>This tweet is 140 chars. This tweet is 140 chars.
+            This tweet is 140 chars. This tweet is 140 chars.
+            This tweet is 140 chars. This tweet is 1</strong>
+            </p>
+          </section>
+          <footer>
+            <p class="posted-date">10 days ago</p>
+            <div class="tweets-interact">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-sharp fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>

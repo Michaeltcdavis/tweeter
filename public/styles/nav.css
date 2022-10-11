@@ -22,11 +22,11 @@ nav div {
   align-items: center;
 }
 
-#write-tweet {
+div#write-tweet p {
   margin-bottom: 0px;
 }
 
-i {
+div#write-tweet i {
   color: orangered;
   flex-shrink: 1;
 }
