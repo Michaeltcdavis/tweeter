@@ -47,7 +47,7 @@ $(() => {
     }
   }
   
-  //TESTING---------------------------------------------
+  //TESTING FOR RENDERTWEETS FUNCTION-------------------
   const data = [
     {
       "user": {
@@ -75,5 +75,13 @@ $(() => {
   ]
   //----------------------------------------------------
   renderTweets(data);
-});
 
+  $('section.new-tweet form').on('submit', function (event) {
+    event.preventDefault();
+    const form = $(event.target);
+    //tweetContent = form.find('textarea').val();
+    console.log(form.serialize());
+    $.ajax('/tweets', { data: form.serialize(), method: 'POST' })
+      .catch((err) => console.log(err));
+  });
+})
