@@ -20,6 +20,7 @@ article.tweets header {
 article.tweets header p {
   color: #4056A1;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 div.username {
@@ -66,6 +67,8 @@ article.tweets footer div {
 
 i {
   color: #4056A1;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 i.icon-highlight {
