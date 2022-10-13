@@ -1,3 +1,15 @@
+/*
+ * New Tweet Area
+ */
+ 
+ section.new-tweet {
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  padding: 10px;
+}
+
 section.new-tweet button {
   font-family: 'Bungee', cursive;
   background-color: #4056A1;
@@ -15,14 +27,6 @@ section.new-tweet button {
   min-height: 35px;
   resize: none;
   background-color: #f4f1ec;
-}
-
-section.new-tweet {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  padding: 10px;
 }
 
 form {

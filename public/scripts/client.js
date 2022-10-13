@@ -18,6 +18,16 @@ $(() => {
     $('#tweet-text').focus();
   })
 
+  $(window).on('scroll', () => {
+    if ($(this).scrollTop() < 130) {
+      $('#scroll-top').css('display', 'none')
+    } else {
+      $('#scroll-top').slideDown('slow');
+      }
+  });
+
+
+
   //get days since posted
   const getDaysAgo = function (earlierDate) {
     return timeago.format(earlierDate);
@@ -84,4 +94,5 @@ $(() => {
   }
 
   loadTweets();
+
 })

@@ -1,4 +1,8 @@
-.page-header {
+/*
+ * styling the header here
+ */
+ 
+ .page-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -8,4 +12,8 @@
   background-color: #677bb8;
   background-image: url('../images/black-orchid.png');
   color: beige;
+}
+
+.page-header img {
+  margin-top: 20px;
 }
