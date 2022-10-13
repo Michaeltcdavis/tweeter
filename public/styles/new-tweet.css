@@ -36,3 +36,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
 }
+
+label {
+  color: orangered;
+}
