@@ -1,4 +1,4 @@
-button {
+section.new-tweet button {
   font-family: 'Bungee', cursive;
   background-color: #4056A1;
   color: #ffffff;
@@ -18,7 +18,7 @@ button {
 }
 
 section.new-tweet {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
   align-items: center;

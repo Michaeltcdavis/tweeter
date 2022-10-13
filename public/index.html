@@ -31,16 +31,17 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-directory.js"></script>
-    <script type="text/javascript" src="/scripts/tweet-dynamics.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
+    <div id="logo">tweeter</div>
     <nav>
-      <span id="logo">tweeter</span>
       <div id="write-tweet">
-        <p><strong>Write</strong> a new tweet</p>
+        <button>
+        <p>Write a new tweet</p>
         <i class="fa-solid fa-angles-down"></i>
+        </button>
       </div>
     </nav>
     <header class="page-header">
@@ -67,6 +68,9 @@
       <section id="tweets-container">
         <!--Tweets loaded from the server go here-->
       </section>
+      <button id="scroll-top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
     </main>
   </body>
 </html>

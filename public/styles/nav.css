@@ -1,20 +1,14 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #4460bcf4;
   color: #ffffff;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
   align-items: center;
-  position: fixed;
 }
-
-nav span {
-   font-family: 'Bungee', cursive;
-   font-size: 16;
- }
 
 nav div {
   display: flex;
@@ -29,4 +23,25 @@ div#write-tweet p {
 div#write-tweet i {
   color: orangered;
   flex-shrink: 1;
+  animation-name: icon-bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+nav button {
+  border: none;
+  background-color: #ffffff00;
+  color: #ffffff;
+}
+
+nav button:hover {
+  font-weight: bolder;
+}
+
+
+@keyframes icon-bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); } 
+  100% { transform: translateY(0); }
 }

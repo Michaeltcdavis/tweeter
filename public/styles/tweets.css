@@ -65,12 +65,12 @@ article.tweets footer div {
   margin-bottom: 10px;
 }
 
-i {
+article.tweets i {
   color: #4056A1;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-i:hover {
+article.tweets i:hover {
   color: #ddbe88;
 }

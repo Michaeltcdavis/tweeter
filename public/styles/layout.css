@@ -25,6 +25,15 @@ body {
   align-items: center;
 }
 
+#logo {
+  color: white;
+  position: fixed;
+  left: 40px;
+  top: 45px; 
+  font-family: 'Bungee', cursive;
+  font-size: 16;
+}
+
 main {
   width: 90%;
   height: 900px;
@@ -36,6 +45,26 @@ main {
 
 body section {
   width: 100%;
+}
+
+#scroll-top {
+  position:fixed;
+  right: 50px;
+  bottom: 50px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  color: rgb(213, 57, 0);
+  border: solid 2px #011452;
+  background-color: #104d8f9b;
+}
+
+button#scroll-top i {
+  font-size: 40px;
+}
+
+#scroll-top:hover i {
+  font-size: 50px;
 }
 
 /*

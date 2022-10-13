@@ -5,10 +5,25 @@
 */
 $(() => {
 
+  //create tweet reveal button
+  $('nav button').on('click', () => {
+    $('section.new-tweet').slideDown('slow');
+    $('#tweet-text').focus();
+  });
+
+  //scroll-top button
+  $('#scroll-top').on('click', () => {
+    window.scrollTo(0, 0);
+    $('section.new-tweet').slideDown('slow');
+    $('#tweet-text').focus();
+  })
+
+  //get days since posted
   const getDaysAgo = function (earlierDate) {
     return timeago.format(earlierDate);
   }
 
+  //create a tweet from object of data
   const createTweetElement = function (tweetObject) {
     const daysAgo = getDaysAgo(tweetObject.created_at)
     const $tweet = $('<article class="tweets">');
@@ -28,12 +43,14 @@ $(() => {
     return $tweet;
   }
 
+  //add tweet elements to html page
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
       $('#tweets-container').prepend(createTweetElement(tweet));
     }
   }
 
+  //submit written tweet
   $('section.new-tweet form').on('submit', function (event) {
     event.preventDefault();
     const form = $(event.target);
@@ -57,6 +74,7 @@ $(() => {
       .catch((err) => console.log(err));
   });
 
+  //get tweets from backend
   const loadTweets = function () {
     $.ajax('/tweets', { method: 'GET' })
       .then((tweets) => {
