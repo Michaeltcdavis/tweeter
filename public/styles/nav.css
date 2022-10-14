@@ -1,11 +1,119 @@
 /*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+* Variables
+*/
+/* Mixins */
+/*
+ * Global layout stuff
+ */
+body {
+  color: #47443d;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section {
+  width: 100%;
+}
+
+#logo {
+  color: white;
+  position: fixed;
+  left: 40px;
+  top: 45px;
+  font-family: "Bungee", cursive;
+  font-size: 16;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 55px;
+}
+
+#tweets-container {
+  width: 90%;
+}
+
+button#scroll-top {
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  color: rgb(238, 64, 0);
+  border: solid 2px #2044b9;
+  background-color: rgb(73, 104, 204);
+}
+button#scroll-top i {
+  font-size: 40px;
+}
+
+#scroll-top:hover i {
+  font-size: 60px;
+}
+
+/*
+ * Adjusting to desktop
+ */
+@media only screen and (min-width: 1024px) {
+  nav {
+    position: fixed;
+  }
+  #logo {
+    z-index: 100;
+  }
+  .page-content {
+    flex-direction: row-reverse;
+  }
+  .page-header {
+    position: fixed;
+    justify-content: flex-start;
+    top: 120px;
+    left: 0px;
+    width: 40%;
+    height: 1000px;
+  }
+  main {
+    padding-top: 135px;
+    width: 60%;
+  }
+  #scroll-top {
+    display: none;
+  }
+}
+/*
  * styling the nave bar here
  */
- 
- nav {
+nav {
   height: 120px;
   width: 100%;
-  background-color: #4460bcf4;
+  background-color: rgb(73, 104, 204);
   color: #ffffff;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -13,29 +121,14 @@
   flex-direction: row-reverse;
   align-items: center;
 }
-
 nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-div#write-tweet p {
-  margin-bottom: 0px;
-}
-
-div#write-tweet i {
-  color: orangered;
-  flex-shrink: 1;
-  animation-name: icon-bounce;
-  animation-timing-function: ease;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
 nav button {
   border: none;
-  background-color: #ffffff00;
+  background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
 }
 
@@ -43,9 +136,26 @@ nav button:hover {
   font-weight: bolder;
 }
 
+div#write-tweet p {
+  margin-bottom: 0px;
+}
+div#write-tweet i {
+  color: rgb(238, 64, 0);
+  flex-shrink: 1;
+  animation-name: icon-bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
 @keyframes icon-bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); } 
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

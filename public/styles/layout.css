@@ -5,58 +5,62 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
+* Variables
+*/
+/* Mixins */
+/*
  * Global layout stuff
  */
-
 body {
-  color: #545149;
-  width: 100%;
+  color: #47443d;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+body section {
+  width: 100%;
 }
 
 #logo {
   color: white;
   position: fixed;
   left: 40px;
-  top: 45px; 
-  font-family: 'Bungee', cursive;
+  top: 45px;
+  font-family: "Bungee", cursive;
   font-size: 16;
 }
 
 .page-content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
 }
 
 main {
-  width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 55px;
 }
 
 #tweets-container {
   width: 90%;
 }
 
-body section {
-  width: 100%;
-}
-
-#scroll-top {
+button#scroll-top {
   display: none;
-  position:fixed;
+  position: fixed;
   right: 50px;
   bottom: 20px;
   height: 75px;
@@ -64,16 +68,16 @@ body section {
   border-radius: 50%;
   color: rgb(238, 64, 0);
   border: solid 2px #2044b9;
-  background-color: #4460bcf4;
+  background-color: rgb(73, 104, 204);
 }
-
 button#scroll-top i {
   font-size: 40px;
 }
 
 #scroll-top:hover i {
-  font-size: 50px;
+  font-size: 60px;
 }
+
 /*
  * Adjusting to desktop
  */
@@ -87,8 +91,7 @@ button#scroll-top i {
   .page-content {
     flex-direction: row-reverse;
   }
-
-  .page-header { 
+  .page-header {
     position: fixed;
     justify-content: flex-start;
     top: 120px;
