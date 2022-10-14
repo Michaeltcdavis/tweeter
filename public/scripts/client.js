@@ -26,8 +26,6 @@ $(() => {
       }
   });
 
-
-
   //get days since posted
   const getDaysAgo = function (earlierDate) {
     return timeago.format(earlierDate);
@@ -74,7 +72,6 @@ $(() => {
       form.find("label[for='tweet-text']").text('Tweet is empty');
       return;
     } 
-    console.log(tweetContent)
     $.ajax('/tweets', { data: form.serialize(), method: 'POST' })
       .then(() => {
         form.find('textarea').val('');
