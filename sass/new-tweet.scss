@@ -1,0 +1,48 @@
+/*
+ * New Tweet Area
+ */
+
+ @use 'layout';
+ 
+ section.new-tweet {
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  padding: 10px;
+  
+  button {
+    font-family: 'Bungee', cursive;
+    background-color: layout.$header-blue;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+}
+
+#tweet-text {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: solid #555555 2px;
+  outline: none;
+  width: 100%;
+  min-height: 35px;
+  resize: none;
+  background-color: #f4f1ec;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.below-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+label {
+  color: orangered;
+}

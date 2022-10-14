@@ -1,0 +1,22 @@
+/*
+ * styling the header here
+ */
+
+ @use 'layout';
+ 
+ .page-header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: layout.$header-blue;
+  background-image: url('../images/black-orchid.png');
+  color: beige;
+  
+  img {
+    margin-top: 20px;
+  }
+
+}

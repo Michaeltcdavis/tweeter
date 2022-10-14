@@ -1,0 +1,86 @@
+/*
+ * styling posted tweets with this page
+ */
+
+ @use 'layout';
+ 
+ article.tweets {
+  border: layout.$tweet-border;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+article.tweets:hover {
+  box-shadow: 5px 10px #885555;
+}
+
+/* TWEET HEADER */
+article.tweets header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweets header p {
+  color: layout.$header-blue;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+div.username {
+  display: flex;
+   flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+
+div.username img {
+  height: 50px;
+  width: 50px;
+}
+
+/* TWEET BODY SECTION */
+article.tweets section {
+  border-bottom: layout.$tweet-border;
+  display: flex;
+  flex-direction: row;
+  font-size: larger;
+  font-weight: 800;
+}
+
+/* TWEET FOOTER */
+article.tweets footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  p {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  div {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+article.tweets i {
+  color: layout.$header-blue;
+  margin-left: 2px;
+  margin-right: 2px;
+  
+}
+
+article.tweets i:hover {
+  color: layout.$tweet-icon-hover-color;
+}
