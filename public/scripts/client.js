@@ -75,6 +75,7 @@ $(() => {
     $.ajax('/tweets', { data: form.serialize(), method: 'POST' })
       .then(() => {
         form.find('textarea').val('');
+        $('#tweet-text').trigger('input');
         $('#tweets-container').empty();
         loadTweets();
       })

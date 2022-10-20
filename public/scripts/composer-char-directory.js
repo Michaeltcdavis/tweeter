@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('#tweet-text').on('keyup', function () {
+  $('#tweet-text').on('input', function () {
     const remainingChars = 140 - this.value.length;
     if (remainingChars < 0) {
       $(this).siblings('div.below-input').children('output').css('color', 'red');
